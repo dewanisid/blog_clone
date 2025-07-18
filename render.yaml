@@ -12,3 +12,10 @@ services:
         fromService:
           type: postgres
           name: my_blog
+
+      - key: DJANGO_SUPERUSER_USERNAME
+        value: sid
+      - key: DJANGO_SUPERUSER_EMAIL
+        value: sd60rox@gmail.com
+      - key: DJANGO_SUPERUSER_PASSWORD
+        value: redhat
