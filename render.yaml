@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: blog_clone
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: |
+      python manage.py migrate &&
+      python manage.py createsuperuser &&
+      gunicorn mysite.wsgi:application
+    envVars:
+      - key: DATABASE_URL
+        fromService:
+          type: postgres
+          name: my_blog
