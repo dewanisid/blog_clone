@@ -1,7 +1,7 @@
 import os
 import django
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")  # replace 'mysite' with your project name
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blog_clone.settings")  # replace 'mysite' with your project name
 django.setup()
 
 from django.contrib.auth import get_user_model
